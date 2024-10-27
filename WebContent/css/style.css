@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.box {
+  margin: auto;
+  color: #464646;
+  /*文字色*/
+  background: #fff;
+  border: solid 5px #e58279;
+  /*線*/
+  border-radius: 10px;
+  /*角の丸み*/
+}
+
+.button {
+  text-align: center;
+}
+
+.sb {
+  background-color: #e58279;
+  color: #f7d4c6;
+  border: solid 3px #f7d4c6;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.sb:visited {
+  color: #f7d4c6;
+}
+
+h1 {
+  color: #e58279;
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px #f7d4c6;
+  line-height: 2;
+  /*行高*/
+}
+/*# sourceMappingURL=style.css.map */

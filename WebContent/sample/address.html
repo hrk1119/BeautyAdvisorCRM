@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>住所</title>
+</head>
+
+<body>
+    <form>
+        <label>郵便番号</label>
+        <input type="text" name="zip" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');" /><br>
+        <label>住所</label>
+        <input type="text" name="address" />
+    </form>
+
+    <script src="../js/ajaxzip3.js"></script>
+</body>
+
+</html>

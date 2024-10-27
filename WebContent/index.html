@@ -1,0 +1,150 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Select2.css -->
+    <link rel="stylesheet" href="./css/select2.min.css">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <title>Document</title>
+
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- サイドバー -->
+            <nav id="sidebar" class="col-md-2 d-none d-md-block employee">
+                <ul class="list-unstyled components">
+                    <li class="return">
+                        <a class="return_icon" href="#">もどる</a>
+                    </li>
+                    <li class="active">
+                        <a href="#menu_Submenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle menu_icon">顧客メニュー</a>
+                        <ul class="collapse list-unstyled" id="menu_Submenu">
+                            <li>
+                                <a href="#">診断</a>
+                            </li>
+                            <li>
+                                <a href="#">おすすめ分析</a>
+                            </li>
+                            <li>
+                                <a href="#">商品検索</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle employee_icon" data-toggle="collapse" aria-expanded="false"
+                            href="#employee_Submenu">従業員管理</a>
+                        <ul class="collapse list-unstyled" id="employee_Submenu">
+                            <li>
+                                <a href="#">従業員登録</a>
+                            </li>
+                            <li>
+                                <a href="#">従業員検索</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#customer_Submenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle customer_icon">顧客管理</a>
+                        <ul class="collapse list-unstyled" id="customer_Submenu">
+                            <li>
+                                <a href="customer_regist.html">顧客登録</a>
+                            </li>
+                            <li>
+                                <a href="customer_search.html">顧客検索</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#product_Submenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle product_icon">商品管理</a>
+                        <ul class="collapse list-unstyled" id="product_Submenu">
+                            <li>
+                                <a href="#">商品登録</a>
+                            </li>
+                            <li>
+                                <a href="#">商品検索</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="mail_icon" 　href="#">メール・DM作成</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <div class="col-md-2"></div>
+
+            <!-- メイン -->
+            <div class="col-md-10 mb-5">
+                <div class="row">
+                    <div class="col-10 mt-5 box">
+                        <img src="img/products/BE101.png" width="300px" id="main">
+                        <div class="row">
+                            <a href="#">
+                                <img src="img/products/BL201.png" width="300px" id="sub1" class="change">
+                            </a>
+                            <a href="#">
+                                <img src="img/products/BE771.png" width="300px" id="sub2" class="change">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- Select2 -->
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/ja.js"></script>
+
+    <script>
+
+        //tagetclassグループで指定
+        const targets = document.getElementsByClassName('change');
+        const img1 = document.querySelector('#sub1').src;
+
+        //for分で要素数分ループ処理
+        for (let i = 0; i < targets.length; i++) {
+
+            targets[i].addEventListener('click', () => {
+                document.querySelector('#main').src = targets[i].src;
+            }, false);
+
+        }
+
+        	/**入力チェック**/
+		jQuery(document).ready(function () {
+			jQuery("#form").validationEngine({ //formのidと合わせる
+				promptPosition: "topRight"
+			});
+		});
+
+
+    </script>
+</body>
+
+</html>

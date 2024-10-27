@@ -1,0 +1,396 @@
+//カラー
+$mainPink: #e58279;
+$subPink: #f7d4c6;
+$mainNavy: #15193a;
+$subNavy: #2b2f5e;
+$mainGray: #464646;
+$subGray: #a7a5a5;
+$subGray: #a7a5a5;
+$yellow: #ffff66;
+$orange: #ffcc00;
+$blue1: #99ccff;
+$blue2: #0066ff;
+
+//メイン
+.box {
+  margin: auto;
+  color: $mainGray; /*文字色*/
+  background: #fff;
+  border: solid 5px $mainPink; /*線*/
+  border-radius: 10px; /*角の丸み*/
+  font-size: 1em;
+  height: 100%;
+}
+.button {
+  text-align: center;
+}
+.sb {
+  background-color: $mainPink;
+  color: $subPink;
+  border: solid 3px $subPink;
+  border-radius: 10px;
+  padding: 15px;
+}
+.sb:visited {
+  color: $subPink;
+}
+
+h1 {
+  color: $mainPink;
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px $subPink;
+  line-height: 2; /*行高*/
+  text-align: center;
+}
+
+.btn_pink {
+  background-color: $mainPink;
+  color: #fff;
+  border: solid 3px $subPink;
+  border-radius: 10px;
+  padding: 5px;
+  height: 45px;
+  margin: auto;
+  color: $subPink;
+  bottom: 15px;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.start {
+  border-top: none;
+}
+
+//ページネーション
+.clearfix {
+  position: relative;
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.selection {
+  display: none;
+}
+#page-1 {
+  display: block;
+}
+
+.product_search {
+  .box {
+    color: $mainGray;
+  }
+  .search {
+    th {
+      width: 25%;
+      background-color: #fff;
+      text-align: center;
+      line-height: 35px;
+    }
+    td {
+      background-color: #fff;
+      line-height: 35px;
+    }
+    .p {
+      color: $mainGray;
+      font-weight: normal; //文字を細く
+    }
+    .price {
+      position: relative;
+    }
+    .price::before {
+      position: absolute;
+      content: "￥";
+      top: 1px;
+      bottom: 0;
+      left: 5px;
+    }
+  }
+
+  //結果
+  .result {
+    margin: auto;
+    padding: 0px;
+    .result_table {
+      margin: auto;
+      width: 100%;
+      color: $mainGray;
+      text-align: center;
+      vertical-align: middle;
+
+      thead {
+        background-color: $subPink;
+        border: none;
+        th {
+          border: none;
+        }
+      }
+      tbody {
+        background-color: #fff;
+        td {
+          height: 20px;
+        }
+
+        p {
+          line-height: 20px;
+          margin: 0px;
+        }
+      }
+    }
+    .detail {
+      background-color: #fff;
+      color: $subPink;
+      border: solid 3px $mainPink;
+      border-radius: 10px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-weight: bold;
+      color: $mainPink;
+    }
+  }
+  .table td {
+    vertical-align: middle;
+  }
+}
+
+.product_regist {
+  .box {
+    height: 100%;
+    margin: auto;
+    color: $mainGray; /*文字色*/
+    background: #fff;
+    border: solid 5px $mainPink; /*線*/
+    border-radius: 10px; /*角の丸み*/
+  }
+
+  h1 {
+    text-align: center;
+    color: $mainPink;
+    /*線の種類（点線）2px 線色*/
+    border-bottom: dashed 2px $subPink;
+    line-height: 2; /*行高*/
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .search {
+    height: 100%;
+    color: $mainGray;
+    .start {
+      border-top: none;
+    }
+    th {
+      width: 25%;
+      background-color: #fff;
+      text-align: center;
+      line-height: 35px;
+    }
+    td {
+      background-color: #fff;
+      line-height: 35px;
+    }
+    .p {
+      color: $mainGray;
+      font-weight: normal; //文字を細く
+    }
+  }
+
+  .box2 {
+    height: 100%;
+    margin: auto;
+    color: $mainGray; /*文字色*/
+    background: #fff;
+    border: solid 3px $subNavy; /*線*/
+    border-radius: 10px; /*角の丸み*/
+  }
+
+  //ボタン
+  .button {
+    text-align: center;
+  }
+  .sb {
+    background-color: $mainPink;
+    color: $subPink;
+    border: solid 3px $subPink;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .sb:visited {
+    color: $subPink;
+  }
+}
+
+.product_search_c {
+  .selection {
+    display: none;
+  }
+  #page-1 {
+    display: flex;
+  }
+  .box1 {
+    margin: auto;
+    color: $mainGray; /*文字色*/
+    background-color: #fff;
+    font-size: 1em;
+    height: 100%;
+  }
+  .b .start {
+    border-top: none;
+  }
+  .search {
+    th {
+      width: 25%;
+      background-color: #fff;
+      text-align: center;
+      line-height: 35px;
+    }
+    td {
+      background-color: #fff;
+      line-height: 35px;
+    }
+    .p {
+      color: $mainGray;
+      font-weight: normal; //文字を細く
+    }
+    .price {
+      position: relative;
+    }
+    .price::before {
+      position: absolute;
+      content: "￥";
+      top: 1px;
+      bottom: 0;
+      left: 5px;
+    }
+  }
+
+  //結果
+  .result {
+    margin: auto;
+    padding: 0px;
+    .result_table {
+      margin: auto;
+      width: 100%;
+      color: $mainGray;
+      text-align: center;
+      vertical-align: middle;
+
+      thead {
+        background-color: $subPink;
+        border: none;
+        th {
+          border: none;
+        }
+      }
+      tbody {
+        background-color: #fff;
+        td {
+          height: 20px;
+        }
+
+        p {
+          line-height: 20px;
+          margin: 0px;
+        }
+      }
+    }
+    .detail {
+      background-color: #fff;
+      color: $subPink;
+      border: solid 3px $mainPink;
+      border-radius: 10px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-weight: bold;
+      color: $mainPink;
+    }
+  }
+  .table td {
+    vertical-align: middle;
+  }
+  /*General style */
+
+  .panel-title a {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-right: 20px;
+  }
+
+  .panel-default > .panel-heading {
+    text-align: left;
+  }
+
+  .panel-heading {
+    padding: 15px 15px;
+  }
+
+  /* Code for animation -- to change direction of chevron just change -40px to 40px and vice versa */
+  .glyphicon-chevron-down-custom span,
+  .glyphicon-chevron-up-custom span {
+    width: 14px;
+    height: 7px;
+    background-color: #fff;
+    display: inline-block;
+    transition: all 0.05s linear;
+    margin-bottom: 5px;
+  }
+
+  .glyphicon-chevron-down-custom .sp-1,
+  .glyphicon-chevron-up-custom .sp-2 {
+    transform: skewY(-40deg);
+  }
+
+  .glyphicon-chevron-up-custom .sp-1,
+  .glyphicon-chevron-down-custom .sp-2 {
+    transform: skewY(40deg);
+  }
+
+  .panel-heading {
+    background-color: #e58279;
+    color: #fff;
+    text-align: right;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  i {
+    position: absolute;
+    right: 30px;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card {
+      text-align: center;
+      height: 50%;
+      padding: 10px;
+      border: solid 3px $mainPink;
+      border-radius: 10px;
+      .card-img-top {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.product_edit {
+  margin-top: 13em;
+}

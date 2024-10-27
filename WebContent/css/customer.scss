@@ -1,0 +1,398 @@
+//カラー
+$mainPink: #e58279;
+$subPink: #f7d4c6;
+$mainNavy: #15193a;
+$subNavy: #2b2f5e;
+$mainGray: #464646;
+$subGray: #a7a5a5;
+$yellow: #ffff66;
+$orange: #ffcc00;
+$blue1: #99ccff;
+$blue2: #0066ff;
+
+//メイン
+.box {
+  margin: auto;
+  color: $mainGray; /*文字色*/
+  background: #fff;
+  border: solid 5px $mainPink; /*線*/
+  border-radius: 10px; /*角の丸み*/
+  font-size: 1em;
+  height: 100%;
+}
+.button {
+  text-align: center;
+}
+.btn_pink {
+  background-color: $mainPink;
+  color: #fff;
+  border: solid 3px $subPink;
+  border-radius: 10px;
+}
+.sb:visited {
+  color: $subPink;
+}
+h1 {
+  color: $mainPink;
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px $subPink;
+  line-height: 2; /*行高*/
+  text-align: center;
+}
+
+//ページネーション
+.clearfix {
+  position: relative;
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.selection,
+.sa_selection,
+.su_selection {
+  display: none;
+}
+#page-1,
+#sa_page-1,
+#su_page-1 {
+  display: block;
+}
+
+.customer_detail {
+  .none {
+    width: 200px;
+  }
+  .main {
+    color: $mainGray;
+
+    .start {
+      border: none;
+    }
+
+    .btn_pink {
+      position: absolute;
+      right: 20px;
+    }
+
+    .nav-item {
+      background-color: $subPink;
+      width: 200px;
+      a a {
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .active {
+        background-color: #fff;
+        color: $mainPink;
+      }
+    }
+
+    .tab-content {
+      background-color: #fff;
+
+      .tab_name {
+        margin: auto;
+        border: solid 1px $subGray;
+        width: 100%;
+        .name2 {
+          font-size: 15px;
+          padding-top: 5px;
+          padding-bottom: 0px;
+        }
+        p {
+          font-size: 25px;
+          margin: 0px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+
+      .tab1_data {
+        .tb {
+          height: 100%;
+          .start {
+            border-top: none;
+          }
+          th {
+            width: 30%;
+            text-align: center;
+            line-height: 35px;
+          }
+          td {
+            width: 80%;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  .table_result {
+    color: $mainGray;
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+
+    thead {
+      background-color: $subPink;
+    }
+    td {
+      border-top: solid 1px $subGray;
+    }
+    table th,
+    table td {
+      border-top: none;
+    }
+
+    .memo,
+    name {
+      width: 30%;
+    }
+
+    .detail {
+      background-color: #fff;
+      color: $subPink;
+      border: solid 3px $mainPink;
+      border-radius: 10px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-weight: bold;
+      color: $mainPink;
+      line-height: 100%;
+    }
+  }
+
+  .btn-primary {
+    background-color: $mainPink;
+    border-color: $mainPink;
+    &:active {
+      background-color: $mainPink;
+      border-color: $mainPink;
+    }
+  }
+
+  //モーダルのタブ
+  .tabs {
+    position: relative;
+  }
+  .tab-buttons span {
+    color: $mainPink;
+    cursor: pointer;
+    border-bottom: 2px solid #ddd;
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+  }
+  .tab-content2 {
+    padding: 15px;
+    display: inline-block;
+    color: $mainGray;
+  }
+
+  #sale_lamp,
+  #supp_lamp {
+    width: 50%; //移動する幅
+    height: 2px;
+    background: $mainPink;
+    display: block;
+    position: absolute;
+    top: 40px;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+  }
+
+  #sale_lamp.content2,
+  #supp_lamp.content2 {
+    left: 50%;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+  }
+  #sale_lamp.content1,
+  #supp_lamp.content1 {
+    left: 0;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+  }
+  #modal2 {
+    text-align: center;
+  }
+  .product {
+    background-color: $subPink;
+    border-radius: 15px;
+  }
+  .content2 {
+    position: relative;
+    .btn_right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.customer_regist {
+  .box {
+    height: 100%;
+    margin: auto;
+    font-weight: bold;
+    color: $mainGray; /*文字色*/
+    background: #fff;
+    border: solid 5px $mainPink; /*線*/
+    border-radius: 10px; /*角の丸み*/
+  }
+
+  h1 {
+    text-align: center;
+    color: $mainPink;
+    /*線の種類（点線）2px 線色*/
+    border-bottom: dashed 2px $subPink;
+    line-height: 2; /*行高*/
+  }
+
+  .search {
+    height: 100%;
+    color: $mainGray;
+    .start {
+      border-top: none;
+    }
+    th {
+      width: 25%;
+      background-color: #fff;
+      text-align: center;
+      line-height: 35px;
+    }
+    td {
+      background-color: #fff;
+      line-height: 35px;
+    }
+    .p {
+      color: $mainGray;
+      font-weight: normal; //文字を細く
+    }
+  }
+
+  //ボタン
+  .button {
+    text-align: center;
+  }
+  .sb {
+    background-color: $mainPink;
+    color: $subPink;
+    border: solid 3px $subPink;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .sb:visited {
+    color: $subPink;
+  }
+}
+
+.customer_search {
+  .box {
+    color: $mainGray;
+  }
+  .start {
+    border-top: none;
+  }
+  .search {
+    th {
+      width: 25%;
+      background-color: #fff;
+      text-align: center;
+      line-height: 35px;
+    }
+    td {
+      background-color: #fff;
+      line-height: 35px;
+    }
+    .p {
+      color: $mainGray;
+      font-weight: normal; //文字を細く
+    }
+    .price {
+      position: relative;
+    }
+    .price::before {
+      position: absolute;
+      content: "￥";
+      top: 1px;
+      bottom: 0;
+      left: 5px;
+    }
+  }
+
+  //結果
+  .result {
+    margin: auto;
+    padding: 0px;
+    .result_table {
+      margin: auto;
+      width: 100%;
+      color: $mainGray;
+      text-align: center;
+      vertical-align: middle;
+
+      thead {
+        background-color: $subPink;
+        border: none;
+        th {
+          border: none;
+        }
+      }
+      tbody {
+        background-color: #fff;
+        td {
+          height: 20px;
+        }
+
+        p {
+          line-height: 20px;
+          margin: 0px;
+        }
+      }
+    }
+    .detail {
+      background-color: #fff;
+      color: $subPink;
+      border: solid 3px $mainPink;
+      border-radius: 10px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-weight: bold;
+      color: $mainPink;
+    }
+  }
+  .table td {
+    vertical-align: middle;
+  }
+}
+
+.customer_edit {
+  margin-top: 13em;
+}
+
+//メール
+.mail_table {
+  tr:hover {
+    background-color: $subPink;
+  }
+}

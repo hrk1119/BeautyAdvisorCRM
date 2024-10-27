@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <title>セレクト</title>
+</head>
+
+<body>
+    <td><select name="brand" class="form-control select">
+            <option value="">選択してください</option>
+            <option value="1">マキアージュ</option>
+            <option value="2">マジョリカマジョルカ</option>
+            <option value="3">インテグレート グレイシィ</option>
+            <option value="4">インテグレート</option>
+            <option value="5">ケイト</option>
+            <option value="6">コフレドール</option>
+            <option value="7">メディア</option>
+            <option value="8">ヴィセ</option>
+            <option value="9">ヒロインメイク</option>
+        </select></td>
+    </div>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Select2.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+    <!-- Select2本体 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+    <!-- Select2日本語化 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/i18n/ja.js"></script>
+
+    <script>
+        $(function () {
+            $('.select').select2({
+                language: "ja" //日本語化
+            });
+        })
+    </script>
+</body>
+
+</html>

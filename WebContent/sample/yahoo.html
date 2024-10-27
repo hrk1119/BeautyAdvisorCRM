@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <p>yahoo</p>
+    <div class="secItem secCommon">
+      <div id="review_content">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function () {
+
+      let APPID = 'dj00aiZpPW1KQ3gzYk1EUkZPdCZzPWNvbnN1bWVyc2VjcmV0Jng9ODY-'; //アプリID
+      let JAN = '4973167208366'; //JAN
+
+      function search_yahoo(page) {
+        $.ajax({
+          url: 'https://shopping.yahooapis.jp/ShoppingWebService/V1/json/reviewSearch?appid=' + APPID + '&jan=' + JAN,
+          type: 'post',
+          dataType: 'jsonp',
+        })
+          .done(function (data) {
+            console.log(data);
+            var array = ["point", "re"];
+            for (let i = 0; i < data.ResultSet.Result.length; i++) {
+
+              var point = data.ResultSet.Result[i].Ratings.Rate;
+              var review = data.ResultSet.Result[i].Description;
+
+              var sub_array = [[point], [review]];
+
+              array.push(sub_array);
+              // //htmlに追加
+              // var p = document.createElement("p");
+              // p.innerHTML = review;
+              // var div = document.getElementById("review_content");
+              // div.appendChild(p);
+            }
+            array.shift();
+            array.shift();
+            console.log(array);
+          })
+          .fail(function (data) {
+            //読み込み失敗時の処理
+            console.log('読み込みエラー');
+          });
+      }
+
+      search_yahoo();
+
+    });
+  </script>
+</body>
+
+</html>

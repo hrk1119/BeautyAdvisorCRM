@@ -1,0 +1,293 @@
+//カラー
+$mainPink: #e58279;
+$subPink: #f7d4c6;
+$mainNavy: #15193a;
+$subNavy: #2b2f5e;
+$mainGray: #464646;
+$subGray: #a7a5a5;
+
+h1 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.box {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 500px;
+}
+
+body {
+  background-image: url(../img/img1.jpg);
+  background-size: cover;
+  color: $mainGray;
+  background-attachment: fixed;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+//サイドバー（従業員側）
+#sidebar.employee {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: $mainNavy;
+  color: $subPink;
+  transition: all 0.3s;
+
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding-left: 0;
+  padding-right: 0;
+
+  p {
+    color: $subNavy;
+    background-color: $mainPink;
+  }
+
+  .components {
+    padding-bottom: 100vh;
+    line-height: 3;
+
+    a {
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
+    }
+    .active > a,
+    a[aria-expanded="true"] {
+      color: $subPink;
+      background: $subNavy;
+    }
+    li ul li a {
+      font-size: 0.9em !important;
+      padding-left: 30px !important;
+      background: $mainNavy;
+    }
+    .return {
+      background-color: $mainPink;
+      text-align: center;
+    }
+    //アイコン
+    .return_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f060";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 20px;
+    }
+    .employee_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f2c2";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+    .product_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f02a";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+    .mail_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f0e0";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+    .customer_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f2bd";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+    .menu_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f46c";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+  }
+}
+
+//サイドバー（顧客側）
+#nav-drawer {
+  font-size: 15px;
+  margin: 10px;
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display: none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+  position: fixed;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+  position: absolute;
+  height: 3px; /*線の太さ*/
+  width: 25px; /*長さ*/
+  border-radius: 3px;
+  background: $mainNavy;
+  display: block;
+  content: "";
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none; /*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0; /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /*最前面に*/
+  width: 90%; /*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 200px; /*最大幅（調整してください）*/
+  height: 100vh;
+  transition: 0.3s ease-in-out; /*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%); /*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block; /*カバーを表示*/
+  opacity: 0.5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%); /*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+//中身の内容
+#sidebar.customer {
+  height: 100vh;
+  background: $mainNavy;
+  color: $subPink;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0px;
+
+  p {
+    color: $subNavy;
+    background-color: $subPink;
+  }
+
+  .components {
+    line-height: 3;
+    a {
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
+      color: $subPink;
+      text-decoration: none;
+    }
+    .active > a,
+    a[aria-expanded="true"] {
+      color: $subPink;
+      background: $subNavy;
+    }
+    li ul li a {
+      font-size: 0.9em !important;
+      padding-left: 30px !important;
+      background: $mainNavy;
+    }
+
+    // アイコン
+    .employee_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f4fe";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+    .reco_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f46c";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+    .search_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f22c";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+    .diagnosis_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f201";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 23px;
+    }
+    .return_icon:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f060";
+      font-weight: 900;
+      padding-right: 5px;
+      color: $subPink; /*アイコンの色*/
+      font-size: 20px;
+    }
+  }
+}

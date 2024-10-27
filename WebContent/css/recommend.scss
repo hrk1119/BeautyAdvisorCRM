@@ -1,0 +1,728 @@
+//カラー
+$mainPink: #e58279;
+$subPink: #f7d4c6;
+$mainNavy: #15193a;
+$subNavy: #2b2f5e;
+$mainGray: #464646;
+$subGray: #a7a5a5;
+$yellow: #ffff66;
+$orange: #ffcc00;
+$blue1: #99ccff;
+$blue2: #0066ff;
+
+//メイン
+.button {
+  text-align: center;
+  background-color: $mainPink;
+  color: #fff;
+  border: solid 3px $subPink;
+  border-radius: 10px;
+}
+
+.box {
+  height: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+  color: $mainGray; /*文字色*/
+  background: #fff;
+  border: solid 5px $mainPink; /*線*/
+  border-radius: 10px; /*角の丸み*/
+}
+
+.reco_category {
+  .box {
+    height: 100%;
+
+    p {
+      font-size: 20px;
+      color: $mainGray;
+      font-weight: bold;
+    }
+
+    p.category {
+      font-size: 25px;
+      color: $mainPink;
+      /*線の種類（点線）2px 線色*/
+      border-bottom: dashed 2px $subPink;
+      line-height: 2; /*行高*/
+    }
+
+    .cp_ipradio {
+      width: 90%;
+      margin: 2em auto;
+      text-align: left;
+    }
+    .cp_ipradio label {
+      position: relative;
+      display: block;
+      width: 100%;
+      margin: 2px 0 0;
+      padding: 10px 0;
+    }
+    .cp_ipradio label input[type="radio"] {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      margin-top: 3px;
+      margin-right: 15px;
+    }
+    .cp_ipradio label input[type="radio"]:checked + div span {
+      position: absolute;
+      top: -5px;
+      left: 100%;
+      display: inline-block;
+      visibility: visible;
+      clear: both;
+      margin: 0 0 0 20px;
+      padding: 8px 15px;
+      transition: transform 200ms ease;
+      transform: translateX(0px);
+      text-align: center;
+      white-space: nowrap;
+      color: #ffffff;
+      border-radius: 4px;
+      background-color: $mainGray;
+      box-shadow: 0 0 10px $mainGray;
+    }
+    .cp_ipradio label input[type="radio"]:checked + div span:before {
+      position: absolute;
+      top: 4px;
+      left: -1px;
+      content: "";
+      transform: rotate(45deg);
+      border-top: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $mainGray;
+    }
+    .cp_ipradio label div {
+      position: relative;
+      display: inline-block;
+    }
+    .cp_ipradio label div span {
+      position: absolute;
+      visibility: hidden;
+      transition: transform 200ms ease;
+      transform: translateX(-10px);
+    }
+    .cp_ipradio label:nth-of-type(1) input[type="radio"]:checked + div span {
+      background-color: $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(1) input[type="radio"]:checked + div span:before {
+      border-top: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(2) input[type="radio"]:checked + div span {
+      background-color: $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(2) input[type="radio"]:checked + div span:before {
+      border-top: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(3) input[type="radio"]:checked + div span {
+      background-color: $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(3) input[type="radio"]:checked + div span:before {
+      border-top: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(4) input[type="radio"]:checked + div span {
+      background-color: $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(4) input[type="radio"]:checked + div span:before {
+      border-top: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(5) input[type="radio"]:checked + div span {
+      background-color: $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(5) input[type="radio"]:checked + div span:before {
+      border-top: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(6) input[type="radio"]:checked + div span {
+      background-color: $mainPink;
+    }
+    .cp_ipradio label:nth-of-type(6) input[type="radio"]:checked + div span:before {
+      border-top: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $mainPink;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"].check_box:checked + label {
+      background: $mainNavy;
+      color: #ffffff;
+      border: 2px solid $mainNavy;
+    }
+
+    .check_label:hover {
+      background-color: $subPink;
+    }
+
+    .check_label {
+      font-size: 1em;
+      display: block;
+      float: left;
+      margin-bottom: 50px;
+      width: 200px;
+      height: 55px;
+      text-align: center;
+      line-height: 45px;
+      padding-left: 5px;
+      padding-right: 5px;
+      cursor: pointer;
+      color: $mainNavy;
+      border: 3px solid $mainNavy;
+      border-radius: 5px;
+    }
+    .end {
+      margin-bottom: 30px;
+    }
+
+    //ボタン
+    .btn {
+      margin: auto;
+    }
+    .button {
+      padding: 15px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  //キーワードのカラー
+  #rose {
+    color: #ff69b4;
+    border: 3px solid #ff69b4;
+    &:active {
+      background-color: #ff69b4;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #ff69b4;
+      color: #ffffff;
+    }
+  }
+  #point_check1:checked + label {
+    background: #ff69b4;
+    color: #ffffff;
+    border: 3px solid #ff69b4;
+  }
+
+  #pink {
+    color: #f08080;
+    border: 3px solid #f08080;
+    &:active {
+      background-color: #f08080;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #f08080;
+      color: #ffffff;
+    }
+  }
+  #point_check2:checked + label {
+    background: #f08080;
+    color: #ffffff;
+    border: 3px solid #f08080;
+  }
+
+  #red {
+    color: red;
+    border: 3px solid red;
+    &:active {
+      background-color: red;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: red;
+      color: #ffffff;
+    }
+  }
+  #point_check3:checked + label {
+    background: red;
+    color: #ffffff;
+    border: 3px solid red;
+  }
+
+  #brown {
+    color: #a0522d;
+    border: 3px solid #a0522d;
+    &:active {
+      background-color: #a0522d;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #a0522d;
+      color: #ffffff;
+    }
+  }
+  #point_check4:checked + label {
+    background: #a0522d;
+    color: #ffffff;
+    border: 3px solid #a0522d;
+  }
+
+  #beige {
+    color: #ffcf88;
+    border: 3px solid #ffcf88;
+    &:active {
+      background-color: #ffcf88;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #ffcf88;
+      color: #ffffff;
+    }
+  }
+  #point_check5:checked + label {
+    background: #ffcf88;
+    color: #ffffff;
+    border: 3px solid #ffcf88;
+  }
+
+  #orange {
+    color: orange;
+    border: 3px solid orange;
+    &:active {
+      background-color: orange;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: orange;
+      color: #ffffff;
+    }
+  }
+  #point_check6:checked + label {
+    background: orange;
+    color: #ffffff;
+    border: 3px solid orange;
+  }
+
+  #purple {
+    color: #800080;
+    border: 3px solid #800080;
+    &:active {
+      background-color: #800080;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #800080;
+      color: #ffffff;
+    }
+  }
+  #point_check7:checked + label {
+    background: #800080;
+    color: #ffffff;
+    border: 3px solid #800080;
+  }
+
+  #green {
+    color: #7cfc00;
+    border: 3px solid #7cfc00;
+    &:active {
+      background-color: #7cfc00;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #7cfc00;
+      color: #ffffff;
+    }
+  }
+  #point_check8:checked + label {
+    background: #7cfc00;
+    color: #ffffff;
+    border: 3px solid #7cfc00;
+  }
+
+  #blue {
+    color: #1e90ff;
+    border: 3px solid #1e90ff;
+    &:active {
+      background-color: #1e90ff;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #1e90ff;
+      color: #ffffff;
+    }
+  }
+  #point_check9:checked + label {
+    background: #1e90ff;
+    color: #ffffff;
+    border: 3px solid #1e90ff;
+  }
+
+  #yellow {
+    color: #ffff00;
+    border: 3px solid #ffff00;
+    &:active {
+      background-color: #ffff00;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #ffff00;
+      color: #ffffff;
+    }
+  }
+  #point_check10:checked + label {
+    background: #ffff00;
+    color: #ffffff;
+    border: 3px solid #ffff00;
+  }
+
+  #gold {
+    color: #ffd700;
+    border: 3px solid #ffd700;
+    &:active {
+      background-color: #ffd700;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #ffd700;
+      color: #ffffff;
+    }
+  }
+  #point_check11:checked + label {
+    background: #ffd700;
+    color: #ffffff;
+    border: 3px solid #ffd700;
+  }
+
+  #silver {
+    color: #c0c0c0;
+    border: 3px solid #c0c0c0;
+    &:active {
+      background-color: #c0c0c0;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #c0c0c0;
+      color: #ffffff;
+    }
+  }
+  #point_check12:checked + label {
+    background: #c0c0c0;
+    color: #ffffff;
+    border: 3px solid #c0c0c0;
+  }
+
+  #gray {
+    color: #808080;
+    border: 3px solid #808080;
+    &:active {
+      background-color: #808080;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #808080;
+      color: #ffffff;
+    }
+  }
+  #point_check13:checked + label {
+    background: #808080;
+    color: #ffffff;
+    border: 3px solid #808080;
+  }
+
+  #Multi {
+    color: $mainNavy;
+    border: 3px solid $mainNavy;
+    &:active {
+      background-color: $mainNavy;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: $mainNavy;
+      color: #ffffff;
+    }
+  }
+  #point_check14:checked + label {
+    background: $mainNavy;
+    color: #ffffff;
+    border: 3px solid $mainNavy;
+  }
+}
+
+.product_search {
+  h1 {
+    margin: auto;
+    padding: 0.3em;
+    border: dashed 1px #ffffff;
+    background: $mainPink;
+    box-shadow: 0px 0px 0px 5px $mainPink;
+    color: #ffffff;
+  }
+  .content {
+    justify-content: center;
+    .card {
+      height: 100%;
+      padding: 10px;
+      border: solid 3px $mainPink;
+      border-radius: 10px;
+      .card-img-top {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .button {
+      padding: 8px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.product_detail {
+  .box {
+    height: 100%;
+  }
+  .manufacturer,
+  .brand {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0px;
+  }
+  .url {
+    color: $subNavy;
+  }
+  h3 {
+    font-size: 1em;
+    color: $mainPink;
+    /*線の種類（点線）2px 線色*/
+    border-bottom: dashed 2px $subPink;
+    line-height: 2; /*行高*/
+  }
+  .price,
+  .and {
+    font-size: 1em;
+  }
+  .category {
+    font-size: 1em;
+  }
+  .comment {
+    line-height: 2em;
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: auto;
+    padding: 0.3em;
+    border: dashed 1px #ffffff;
+    background: $mainPink;
+    box-shadow: 0px 0px 0px 5px $mainPink;
+    color: #ffffff;
+  }
+  .color {
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: center;
+    border: solid 1.5px $mainGray;
+    border-radius: 10px;
+    line-height: 35px;
+    &.yellow {
+      background-color: $yellow;
+    }
+    &.blue {
+      background-color: $blue1;
+      height: 40px;
+    }
+  }
+  .color_ul {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0px;
+    li {
+      padding: 0px;
+    }
+    .color_content {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  #review_ave {
+   color: $mainPink;
+   font-weight: bold;
+  }
+}
+
+.reco_result {
+  .main {
+    margin-top: 3em;
+  }
+  .links a:link,
+  .links a:visited {
+    color: black;
+    text-decoration: none;
+    font: 20px sans-serif;
+  }
+
+  .links a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .red {
+    border: 1px solid #ffc30d;
+  }
+
+  .red-filled {
+    background: #e0604a;
+    border: 1px solid #ffc30d;
+  }
+
+  .blue {
+    background: #67bccf;
+  }
+
+  .section {
+    width: 800px;
+    border-radius: 10px;
+    margin: 50px auto;
+  }
+
+  .section p {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+    font: 16px sans-serif;
+    line-height: 140%;
+  }
+
+  .section p strong {
+    color: gold;
+  }
+
+  .section-list {
+    width: 800px;
+    border-radius: 10px;
+    margin: 50px auto;
+  }
+
+  .address {
+    margin: 0px auto 50px auto;
+    padding: 0px;
+    width: 800px;
+    text-align: center;
+  }
+
+  .address,
+  .address a {
+    font: 16px arial, sans-serif;
+    color: black;
+  }
+
+  //リボン
+  .ribbon9 {
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .ribbon9:before {
+    /*左側のリボン端*/
+    content: "";
+    position: absolute;
+    width: 10px;
+    bottom: -10px;
+    left: -25px;
+    z-index: -2;
+    border: 20px solid $mainPink;
+    border-left-color: transparent; /*山形に切り抜き*/
+  }
+
+  .ribbon9:after {
+    /*右側のリボン端*/
+    content: "";
+    position: absolute;
+    width: 10px;
+    bottom: -10px;
+    right: -25px;
+    z-index: -2;
+    border: 20px solid $mainPink;
+    border-right-color: transparent; /*山形に切り抜き*/
+  }
+
+  .ribbon9 h1 {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 55px;
+    font-size: 40px;
+    color: #fff;
+    background: $mainPink; /*真ん中の背景色*/
+    width: 340px;
+    height: 60px;
+  }
+  .ribbon9 h1:before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 10px transparent;
+    border-right: solid 15px #b36760; /*左の折り返し部分*/
+  }
+  .ribbon9 h1:after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    right: 0;
+    border: none;
+    border-bottom: solid 10px transparent;
+    border-left: solid 15px #b36760; /*右の折り返し部分*/
+  }
+  .modal-content {
+    margin-top: 13em;
+  }
+
+  //モーダルの中
+  .color {
+    font-size: 0.7em;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    border: solid 1.5px $mainGray;
+    border-radius: 10px;
+    line-height: 35px;
+    &.yellow {
+      background-color: $yellow;
+    }
+    &.blue {
+      background-color: $blue1;
+    }
+    #p_name {
+      font-size: 1.5em;
+    }
+    #memo {
+      font-weight: bold;
+    }
+  }
+  .none {
+    border: none;
+  }
+}

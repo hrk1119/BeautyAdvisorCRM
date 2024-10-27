@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>チェックボックス</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* checkbox02 */
+        input[type=checkbox] {
+            display: none;
+        }
+
+        input[type="checkbox"].check_box:checked+label {
+            background: #31A9EE;
+            color: #ffffff;
+        }
+
+        .check_label:hover {
+            background-color: #E2EDF9;
+        }
+
+        .check_label {
+            display: block;
+            float: left;
+            margin: 5px;
+            width: 100px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            padding-left: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+            color: #31A9EE;
+            border: 2px solid #006DD9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="checkbox" class="check_box" id="check1" name="color" value="ローズ" />
+        <label class="check_label" for="check1">ローズ</label>
+        <input type="checkbox" class="check_box" id="check2" name="color" value="ピンク" />
+        <label class="check_label" for="check2">ピンク</label>
+        <input type="checkbox" class="check_box" id="check3" name="color" value="レッド" />
+        <label class="check_label" for="check3">レッド</label>
+        <input type="checkbox" class="check_box" id="check4" name="color" value="ブラウン" />
+        <label class="check_label" for="check4">ブラウン</label>
+        <input type="checkbox" class="check_box" id="check5" name="color" value="ベージュ" />
+        <label class="check_label" for="check5">ベージュ</label>
+        <input type="checkbox" class="check_box" id="check6" name="color" value="オレンジ" />
+        <label class="check_label" for="check6">オレンジ</label>
+        <input type="checkbox" class="check_box" id="check7" name="color" value="バイオレット" />
+        <label class="check_label" for="check7">バイオレット</label>
+        <input type="checkbox" class="check_box" id="check8" name="color" value="グリーン" />
+        <label class="check_label" for="check8">グリーン</label>
+        <input type="checkbox" class="check_box" id="check9" name="color" value="ブルー" />
+        <label class="check_label" for="check9">ブルー</label>
+        <input type="checkbox" class="check_box" id="check10" name="color" value="イエロー" />
+        <label class="check_label" for="check10">イエロー</label>
+        <input type="checkbox" class="check_box" id="check11" name="color" value="ゴールド" />
+        <label class="check_label" for="check11">ゴールド</label>
+        <input type="checkbox" class="check_box" id="check12" name="color" value="シルバー" />
+        <label class="check_label" for="check12">シルバー</label>
+        <input type="checkbox" class="check_box" id="check13" name="color" value="グレー" />
+        <label class="check_label" for="check13">グレー</label>
+        <input type="checkbox" class="check_box" id="check14" name="color" value="マルチカラー" />
+        <label class="check_label" for="check14">マルチカラー</label>
+    </div>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

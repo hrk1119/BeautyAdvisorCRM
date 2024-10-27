@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <p>楽天</p>
+    <div class="secItem secCommon">
+      <div class="secInner">
+        <ul id="contentInner"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function () {
+
+      let APPID = '1035892425523938345'; //アプリID *必須
+      let MAX_PAGE = 3; //最大取得ページ件数(1ページ30件)。この場合3ページ = 90件取得。
+      let SHOP_CODE = ''; //ショップコード（店舗を指定したい場合）
+      let KEYWORD = encodeURIComponent("オープンユアアイズ"); //絞り込みしたい単語
+      let SORT = '-reviewCount'; //レビューの多い順
+
+      function put_item(item) {
+        //ループで表示したいHTML部分を作成します
+        $("#contentInner").append(
+          `
+     <li>
+     <dl>
+     <dd class="itemName"><a href="${item.itemUrl}" target="_blank">${item.itemName}</a></dd>
+     <dd class="itemValue">レビュー:&nbsp;<span>${item.reviewAverage}</span>(${item.reviewCount})件</dd>
+     </dl>
+     </li>
+     `
+        );
+      }
+
+      //ajax
+      function search_rakuten(page) {
+        $.ajax({
+          url: 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706?format=json&applicationId=' + APPID +
+            '&keyword=' + KEYWORD +
+            '&sort=' + SORT +
+            '&page=' + page,
+          type: 'get',
+          dataType: 'json',
+          timeout: 10000,
+          async: 'true'
+        })
+          .done(function (data) {
+            //読み込み成功時の処理
+            goods = data.Items;
+            for (let i in goods) {
+              put_item(goods[i].Item);
+              console.log(goods[i].Item);
+            }
+            //MAX_PAGEで設定した数値になるまでループします
+            if (page < MAX_PAGE) {
+              search_rakuten(page + 1);
+            }
+          })
+          .fail(function (data) {
+            //読み込み失敗時の処理
+            console.log('読み込みエラー');
+          });
+      }
+
+      search_rakuten(1);
+
+    });
+  </script>
+</body>
+
+</html>

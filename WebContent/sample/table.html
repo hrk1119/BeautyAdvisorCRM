@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table</title>
+  <!-- Bootstrap CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- table CSS-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.20/css/dataTables.semanticui.min.css" rel="stylesheet">
+
+
+  <!-- <link href="../css/table.css" rel="stylesheet"> -->
+
+</head>
+
+<body>
+
+  <table id="example" class="ui celled table" style="width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Age</th>
+        <th>Start date</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <td>b</td>
+        <td>b</td>
+        <td>b</td>
+        <td>b</td>
+        <td>b</td>
+        <td>b</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap -->
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.semanticui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#example').DataTable({
+        language: {
+          url: "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,832 @@
+@charset "UTF-8";
+.button {
+  text-align: center;
+  background-color: #e58279;
+  color: #fff;
+  border: solid 3px #f7d4c6;
+  border-radius: 10px;
+}
+
+.box {
+  height: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+  color: #464646;
+  /*文字色*/
+  background: #fff;
+  border: solid 5px #e58279;
+  /*線*/
+  border-radius: 10px;
+  /*角の丸み*/
+}
+
+.reco_category .box {
+  height: 100%;
+}
+
+.reco_category .box p {
+  font-size: 20px;
+  color: #464646;
+  font-weight: bold;
+}
+
+.reco_category .box p.category {
+  font-size: 25px;
+  color: #e58279;
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px #f7d4c6;
+  line-height: 2;
+  /*行高*/
+}
+
+.reco_category .box .cp_ipradio {
+  width: 90%;
+  margin: 2em auto;
+  text-align: left;
+}
+
+.reco_category .box .cp_ipradio label {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 10px 0;
+}
+
+.reco_category .box .cp_ipradio label input[type="radio"] {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-top: 3px;
+  margin-right: 15px;
+}
+
+.reco_category .box .cp_ipradio label input[type="radio"]:checked + div span {
+  position: absolute;
+  top: -5px;
+  left: 100%;
+  display: inline-block;
+  visibility: visible;
+  clear: both;
+  margin: 0 0 0 20px;
+  padding: 8px 15px;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  text-align: center;
+  white-space: nowrap;
+  color: #ffffff;
+  border-radius: 4px;
+  background-color: #464646;
+  -webkit-box-shadow: 0 0 10px #464646;
+          box-shadow: 0 0 10px #464646;
+}
+
+.reco_category .box .cp_ipradio label input[type="radio"]:checked + div span:before {
+  position: absolute;
+  top: 4px;
+  left: -1px;
+  content: "";
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-top: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #464646;
+}
+
+.reco_category .box .cp_ipradio label div {
+  position: relative;
+  display: inline-block;
+}
+
+.reco_category .box .cp_ipradio label div span {
+  position: absolute;
+  visibility: hidden;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(1) input[type="radio"]:checked + div span {
+  background-color: #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(1) input[type="radio"]:checked + div span:before {
+  border-top: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(2) input[type="radio"]:checked + div span {
+  background-color: #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(2) input[type="radio"]:checked + div span:before {
+  border-top: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(3) input[type="radio"]:checked + div span {
+  background-color: #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(3) input[type="radio"]:checked + div span:before {
+  border-top: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(4) input[type="radio"]:checked + div span {
+  background-color: #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(4) input[type="radio"]:checked + div span:before {
+  border-top: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(5) input[type="radio"]:checked + div span {
+  background-color: #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(5) input[type="radio"]:checked + div span:before {
+  border-top: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(6) input[type="radio"]:checked + div span {
+  background-color: #e58279;
+}
+
+.reco_category .box .cp_ipradio label:nth-of-type(6) input[type="radio"]:checked + div span:before {
+  border-top: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #e58279;
+}
+
+.reco_category .box input[type="checkbox"] {
+  display: none;
+}
+
+.reco_category .box input[type="checkbox"].check_box:checked + label {
+  background: #15193a;
+  color: #ffffff;
+  border: 2px solid #15193a;
+}
+
+.reco_category .box .check_label:hover {
+  background-color: #f7d4c6;
+}
+
+.reco_category .box .check_label {
+  font-size: 1em;
+  display: block;
+  float: left;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 55px;
+  text-align: center;
+  line-height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+  color: #15193a;
+  border: 3px solid #15193a;
+  border-radius: 5px;
+}
+
+.reco_category .box .end {
+  margin-bottom: 30px;
+}
+
+.reco_category .box .btn {
+  margin: auto;
+}
+
+.reco_category .box .button {
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 50px;
+}
+
+.reco_category #rose {
+  color: #ff69b4;
+  border: 3px solid #ff69b4;
+}
+
+.reco_category #rose:active {
+  background-color: #ff69b4;
+  color: #ffffff;
+}
+
+.reco_category #rose:hover {
+  background-color: #ff69b4;
+  color: #ffffff;
+}
+
+.reco_category #point_check1:checked + label {
+  background: #ff69b4;
+  color: #ffffff;
+  border: 3px solid #ff69b4;
+}
+
+.reco_category #pink {
+  color: #f08080;
+  border: 3px solid #f08080;
+}
+
+.reco_category #pink:active {
+  background-color: #f08080;
+  color: #ffffff;
+}
+
+.reco_category #pink:hover {
+  background-color: #f08080;
+  color: #ffffff;
+}
+
+.reco_category #point_check2:checked + label {
+  background: #f08080;
+  color: #ffffff;
+  border: 3px solid #f08080;
+}
+
+.reco_category #red {
+  color: red;
+  border: 3px solid red;
+}
+
+.reco_category #red:active {
+  background-color: red;
+  color: #ffffff;
+}
+
+.reco_category #red:hover {
+  background-color: red;
+  color: #ffffff;
+}
+
+.reco_category #point_check3:checked + label {
+  background: red;
+  color: #ffffff;
+  border: 3px solid red;
+}
+
+.reco_category #brown {
+  color: #a0522d;
+  border: 3px solid #a0522d;
+}
+
+.reco_category #brown:active {
+  background-color: #a0522d;
+  color: #ffffff;
+}
+
+.reco_category #brown:hover {
+  background-color: #a0522d;
+  color: #ffffff;
+}
+
+.reco_category #point_check4:checked + label {
+  background: #a0522d;
+  color: #ffffff;
+  border: 3px solid #a0522d;
+}
+
+.reco_category #beige {
+  color: #ffcf88;
+  border: 3px solid #ffcf88;
+}
+
+.reco_category #beige:active {
+  background-color: #ffcf88;
+  color: #ffffff;
+}
+
+.reco_category #beige:hover {
+  background-color: #ffcf88;
+  color: #ffffff;
+}
+
+.reco_category #point_check5:checked + label {
+  background: #ffcf88;
+  color: #ffffff;
+  border: 3px solid #ffcf88;
+}
+
+.reco_category #orange {
+  color: orange;
+  border: 3px solid orange;
+}
+
+.reco_category #orange:active {
+  background-color: orange;
+  color: #ffffff;
+}
+
+.reco_category #orange:hover {
+  background-color: orange;
+  color: #ffffff;
+}
+
+.reco_category #point_check6:checked + label {
+  background: orange;
+  color: #ffffff;
+  border: 3px solid orange;
+}
+
+.reco_category #purple {
+  color: #800080;
+  border: 3px solid #800080;
+}
+
+.reco_category #purple:active {
+  background-color: #800080;
+  color: #ffffff;
+}
+
+.reco_category #purple:hover {
+  background-color: #800080;
+  color: #ffffff;
+}
+
+.reco_category #point_check7:checked + label {
+  background: #800080;
+  color: #ffffff;
+  border: 3px solid #800080;
+}
+
+.reco_category #green {
+  color: #7cfc00;
+  border: 3px solid #7cfc00;
+}
+
+.reco_category #green:active {
+  background-color: #7cfc00;
+  color: #ffffff;
+}
+
+.reco_category #green:hover {
+  background-color: #7cfc00;
+  color: #ffffff;
+}
+
+.reco_category #point_check8:checked + label {
+  background: #7cfc00;
+  color: #ffffff;
+  border: 3px solid #7cfc00;
+}
+
+.reco_category #blue {
+  color: #1e90ff;
+  border: 3px solid #1e90ff;
+}
+
+.reco_category #blue:active {
+  background-color: #1e90ff;
+  color: #ffffff;
+}
+
+.reco_category #blue:hover {
+  background-color: #1e90ff;
+  color: #ffffff;
+}
+
+.reco_category #point_check9:checked + label {
+  background: #1e90ff;
+  color: #ffffff;
+  border: 3px solid #1e90ff;
+}
+
+.reco_category #yellow {
+  color: #ffff00;
+  border: 3px solid #ffff00;
+}
+
+.reco_category #yellow:active {
+  background-color: #ffff00;
+  color: #ffffff;
+}
+
+.reco_category #yellow:hover {
+  background-color: #ffff00;
+  color: #ffffff;
+}
+
+.reco_category #point_check10:checked + label {
+  background: #ffff00;
+  color: #ffffff;
+  border: 3px solid #ffff00;
+}
+
+.reco_category #gold {
+  color: #ffd700;
+  border: 3px solid #ffd700;
+}
+
+.reco_category #gold:active {
+  background-color: #ffd700;
+  color: #ffffff;
+}
+
+.reco_category #gold:hover {
+  background-color: #ffd700;
+  color: #ffffff;
+}
+
+.reco_category #point_check11:checked + label {
+  background: #ffd700;
+  color: #ffffff;
+  border: 3px solid #ffd700;
+}
+
+.reco_category #silver {
+  color: #c0c0c0;
+  border: 3px solid #c0c0c0;
+}
+
+.reco_category #silver:active {
+  background-color: #c0c0c0;
+  color: #ffffff;
+}
+
+.reco_category #silver:hover {
+  background-color: #c0c0c0;
+  color: #ffffff;
+}
+
+.reco_category #point_check12:checked + label {
+  background: #c0c0c0;
+  color: #ffffff;
+  border: 3px solid #c0c0c0;
+}
+
+.reco_category #gray {
+  color: #808080;
+  border: 3px solid #808080;
+}
+
+.reco_category #gray:active {
+  background-color: #808080;
+  color: #ffffff;
+}
+
+.reco_category #gray:hover {
+  background-color: #808080;
+  color: #ffffff;
+}
+
+.reco_category #point_check13:checked + label {
+  background: #808080;
+  color: #ffffff;
+  border: 3px solid #808080;
+}
+
+.reco_category #Multi {
+  color: #15193a;
+  border: 3px solid #15193a;
+}
+
+.reco_category #Multi:active {
+  background-color: #15193a;
+  color: #ffffff;
+}
+
+.reco_category #Multi:hover {
+  background-color: #15193a;
+  color: #ffffff;
+}
+
+.reco_category #point_check14:checked + label {
+  background: #15193a;
+  color: #ffffff;
+  border: 3px solid #15193a;
+}
+
+.product_search h1 {
+  margin: auto;
+  padding: 0.3em;
+  border: dashed 1px #ffffff;
+  background: #e58279;
+  -webkit-box-shadow: 0px 0px 0px 5px #e58279;
+          box-shadow: 0px 0px 0px 5px #e58279;
+  color: #ffffff;
+}
+
+.product_search .content {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product_search .content .card {
+  height: 100%;
+  padding: 10px;
+  border: solid 3px #e58279;
+  border-radius: 10px;
+}
+
+.product_search .content .card .card-img-top {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.product_search .content .button {
+  padding: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.product_detail .box {
+  height: 100%;
+}
+
+.product_detail .manufacturer,
+.product_detail .brand {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.product_detail .name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.product_detail .url {
+  color: #2b2f5e;
+}
+
+.product_detail h3 {
+  font-size: 1em;
+  color: #e58279;
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px #f7d4c6;
+  line-height: 2;
+  /*行高*/
+}
+
+.product_detail .price,
+.product_detail .and {
+  font-size: 1em;
+}
+
+.product_detail .category {
+  font-size: 1em;
+}
+
+.product_detail .comment {
+  line-height: 2em;
+  font-size: 1em;
+}
+
+.product_detail h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin: auto;
+  padding: 0.3em;
+  border: dashed 1px #ffffff;
+  background: #e58279;
+  -webkit-box-shadow: 0px 0px 0px 5px #e58279;
+          box-shadow: 0px 0px 0px 5px #e58279;
+  color: #ffffff;
+}
+
+.product_detail .color {
+  font-size: 0.7em;
+  font-weight: bold;
+  text-align: center;
+  border: solid 1.5px #464646;
+  border-radius: 10px;
+  line-height: 35px;
+}
+
+.product_detail .color.yellow {
+  background-color: #ffff66;
+}
+
+.product_detail .color.blue {
+  background-color: #99ccff;
+  height: 40px;
+}
+
+.product_detail .color_ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0px;
+}
+
+.product_detail .color_ul li {
+  padding: 0px;
+}
+
+.product_detail .color_ul .color_content {
+  text-align: center;
+}
+
+.product_detail .color_ul p {
+  text-align: center;
+}
+
+.product_detail #review_ave {
+  color: #e58279;
+  font-weight: bold;
+}
+
+.reco_result .main {
+  margin-top: 3em;
+}
+
+.reco_result .links a:link,
+.reco_result .links a:visited {
+  color: black;
+  text-decoration: none;
+  font: 20px sans-serif;
+}
+
+.reco_result .links a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.reco_result .red {
+  border: 1px solid #ffc30d;
+}
+
+.reco_result .red-filled {
+  background: #e0604a;
+  border: 1px solid #ffc30d;
+}
+
+.reco_result .blue {
+  background: #67bccf;
+}
+
+.reco_result .section {
+  width: 800px;
+  border-radius: 10px;
+  margin: 50px auto;
+}
+
+.reco_result .section p {
+  text-align: center;
+  margin: 0px;
+  padding: 20px;
+  font: 16px sans-serif;
+  line-height: 140%;
+}
+
+.reco_result .section p strong {
+  color: gold;
+}
+
+.reco_result .section-list {
+  width: 800px;
+  border-radius: 10px;
+  margin: 50px auto;
+}
+
+.reco_result .address {
+  margin: 0px auto 50px auto;
+  padding: 0px;
+  width: 800px;
+  text-align: center;
+}
+
+.reco_result .address,
+.reco_result .address a {
+  font: 16px arial, sans-serif;
+  color: black;
+}
+
+.reco_result .ribbon9 {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.reco_result .ribbon9:before {
+  /*左側のリボン端*/
+  content: "";
+  position: absolute;
+  width: 10px;
+  bottom: -10px;
+  left: -25px;
+  z-index: -2;
+  border: 20px solid #e58279;
+  border-left-color: transparent;
+  /*山形に切り抜き*/
+}
+
+.reco_result .ribbon9:after {
+  /*右側のリボン端*/
+  content: "";
+  position: absolute;
+  width: 10px;
+  bottom: -10px;
+  right: -25px;
+  z-index: -2;
+  border: 20px solid #e58279;
+  border-right-color: transparent;
+  /*山形に切り抜き*/
+}
+
+.reco_result .ribbon9 h1 {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0 20px;
+  line-height: 55px;
+  font-size: 40px;
+  color: #fff;
+  background: #e58279;
+  /*真ん中の背景色*/
+  width: 340px;
+  height: 60px;
+}
+
+.reco_result .ribbon9 h1:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-right: solid 15px #b36760;
+  /*左の折り返し部分*/
+}
+
+.reco_result .ribbon9 h1:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-left: solid 15px #b36760;
+  /*右の折り返し部分*/
+}
+
+.reco_result .modal-content {
+  margin-top: 13em;
+}
+
+.reco_result .color {
+  font-size: 0.7em;
+  font-weight: bold;
+  height: 40px;
+  text-align: center;
+  border: solid 1.5px #464646;
+  border-radius: 10px;
+  line-height: 35px;
+}
+
+.reco_result .color.yellow {
+  background-color: #ffff66;
+}
+
+.reco_result .color.blue {
+  background-color: #99ccff;
+}
+
+.reco_result .color #p_name {
+  font-size: 1.5em;
+}
+
+.reco_result .color #memo {
+  font-weight: bold;
+}
+
+.reco_result .none {
+  border: none;
+}
+/*# sourceMappingURL=recommend.css.map */

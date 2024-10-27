@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/validationEngine.jquery.css">
+
+    <title>入力チェック</title>
+</head>
+
+<body>
+    <FORM id="register">
+        必須項目<br>
+        <input type="text" name="" class="validate[required]"><br>
+        メール<br>
+        <input type="text" name="" class="validate[custom[email]]" data-prompt-position="inline"><br>
+        英数字<br>
+        <input type="text" name="letnum" id="letnum" value="" class="validate[required,custom[onlyLetterNumber]]"><br>
+        電話<br>
+        <input type="text" name="phone" id="sample2_1" value="" class="validate[required,custom[phone]]"><br>
+        （今より前）<br>
+        <input type="text" name="past" id="past" value="" class="validate[custom[date],past[NOW]]"><br>
+        URL<br>
+        <input type="text" name="" class="validate[custom[url]]"><br>
+        <input type="submit"><br>
+    </FORM>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.validationEngine.js"></script>
+    <script src="../js/jquery.validationEngine-ja.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery("#register").validationEngine({ //formのidと合わせる
+                promptPosition: "topRight"
+            });
+        });
+    </script>
+</body>
+
+</html>

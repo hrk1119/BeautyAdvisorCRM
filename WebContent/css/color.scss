@@ -1,0 +1,375 @@
+//カラー
+$mainPink: #e58279;
+$subPink: #f7d4c6;
+$mainNavy: #15193a;
+$subNavy: #2b2f5e;
+$mainGray: #464646;
+$mainGray: #464646;
+$subGray: #a7a5a5;
+$yellow: #ffff66;
+$orange: #ffcc00;
+$blue1: #99ccff;
+$blue2: #0066ff;
+$border: #ced4da;
+
+//メイン
+.box {
+  margin: auto;
+  color: $mainGray; /*文字色*/
+  background: #fff;
+  border: solid 5px $mainPink; /*線*/
+  border-radius: 10px; /*角の丸み*/
+}
+.button {
+  text-align: center;
+}
+.sb {
+  background-color: $mainPink;
+  color: $subPink;
+  border: solid 3px $subPink;
+  border-radius: 10px;
+  padding: 15px;
+}
+.sb:visited {
+  color: $subPink;
+}
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid $border;
+  height: calc(2.25rem + 2px);
+}
+
+h1 {
+  color: $mainPink;
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px $subPink;
+  line-height: 2; /*行高*/
+}
+
+.color_check {
+  .box {
+    height: 100%;
+  }
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+    font-size: 25px;
+    border-bottom: solid 2px $subPink;
+  }
+
+  //２つのボタン
+  .cp_ipradio {
+    text-align: center;
+  }
+  @keyframes click-wave {
+    0% {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      opacity: 0.35;
+    }
+    100% {
+      width: 200px;
+      height: 200px;
+      margin-top: -80px;
+      margin-left: -80px;
+      opacity: 0;
+    }
+  }
+  .text {
+    justify-content: center;
+  }
+  .cp_ipradio .option-input {
+    position: relative;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: all 0.15s ease-out 0s;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background: #d7cbcb;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .cp_ipradio .option-input:hover {
+    background: #d6a9a9;
+  }
+  .cp_ipradio .option-input:checked {
+    background: #da3c41;
+  }
+  .cp_ipradio .option-input:checked::before {
+    font-size: 20px;
+    line-height: 30px;
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    content: "✔";
+    text-align: center;
+  }
+  .cp_ipradio .option-input:checked::after {
+    position: relative;
+    display: block;
+    content: "";
+    -webkit-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #da3c41;
+  }
+  .cp_ipradio .option-input.radio {
+    border-radius: 50%;
+  }
+  .cp_ipradio .option-input.radio::after {
+    border-radius: 50%;
+  }
+  .cp_ipradio label {
+    line-height: 40px;
+    display: block;
+  }
+  .cp_ipradio .option-input:disabled {
+    cursor: not-allowed;
+    background: #b8b7b7;
+  }
+  .cp_ipradio .option-input:disabled::before {
+    font-size: 20px;
+    line-height: 30px;
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    content: "✖︎";
+    text-align: center;
+  }
+  .cp_ipradio .disabled {
+    color: #9e9e9e;
+  }
+
+  //配置
+  .q1 {
+    margin-top: 50px;
+  }
+  .q2,
+  .q3,
+  .q4,
+  .q5 {
+    margin-top: 100px;
+  }
+
+  .q1_img,
+  .q2_img,
+  .q3_img,
+  .q4_img,
+  .q5_img {
+    width: 300px;
+    height: auto;
+  }
+
+  .button {
+    margin-top: 100px;
+  }
+}
+
+.color_result {
+  .box {
+    height: 100%;
+  }
+  h1 {
+    font-size: 25px;
+    border-bottom: none;
+    color: $mainGray;
+    margin-top: 50px;
+    text-align: center;
+  }
+  em {
+    color: $mainGray;
+    border: solid 2px $subGray;
+    border-radius: 10px;
+    padding: 13px;
+    margin: 30px;
+    &.yellow {
+      background-color: $yellow;
+    }
+    &.blue {
+      background-color: $blue1;
+    }
+  }
+  .img1 {
+    width: 300px;
+    height: auto;
+  }
+  .img2 {
+    width: 600px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 25px;
+    margin-top: 40px;
+  }
+
+  //イエロー
+  .cp_h1title_yellow {
+    font-size: 25px;
+    position: relative;
+    padding: 0.3em 0.7em;
+    border-top: solid 1px $orange;
+    border-bottom: solid 1px $orange;
+  }
+  .cp_h1title_yellow::before,
+  .cp_h1title_yellow::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 1px;
+    height: calc(100% + 20px);
+    background-color: $orange;
+  }
+  .cp_h1title_yellow::before {
+    left: 10px;
+  }
+  .cp_h1title_yellow::after {
+    right: 10px;
+  }
+  .dl_yellow {
+    margin-left: 20px;
+    margin-right: 20px;
+    dt {
+      font-size: 20px;
+      position: relative;
+      padding: 0.5em 1em 0.5em 2.3em;
+      margin-bottom: 5px;
+      border-bottom: 1px solid $orange;
+    }
+    dt:after,
+    dt:before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+    dt:before {
+      top: 50%;
+      left: 0.2em;
+      width: 17px;
+      height: 17px;
+      background: $yellow;
+      transform: translateY(-50%);
+    }
+    dt:after {
+      top: 1.1em;
+      left: 0.7em;
+      width: 14px;
+      height: 14px;
+      background: $orange;
+    }
+    dd {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .check_yellow {
+    position: relative;
+    padding: 0.6em 0.3em 0.3em 0.3em;
+    border: 1px solid $orange;
+    text-align: center;
+  }
+  .check_yellow::after {
+    content: "check!";
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    background: #fafcfc;
+    font-size: 25px;
+    color: $orange;
+    padding: 0 10px;
+  }
+
+  //ブルー
+  .cp_h1title_blue {
+    font-size: 25px;
+    position: relative;
+    padding: 0.3em 0.7em;
+    border-top: solid 1px $blue2;
+    border-bottom: solid 1px $blue2;
+  }
+  .cp_h1title_blue::before,
+  .cp_h1title_blue::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 1px;
+    height: calc(100% + 20px);
+    background-color: $blue2;
+  }
+  .cp_h1title_blue::before {
+    left: 10px;
+  }
+  .cp_h1title_blue::after {
+    right: 10px;
+  }
+  .dl_blue {
+    margin-left: 20px;
+    margin-right: 20px;
+    dt {
+      font-size: 20px;
+      position: relative;
+      padding: 0.5em 1em 0.5em 2.3em;
+      margin-bottom: 5px;
+      border-bottom: 1px solid $blue2;
+    }
+    dt:after,
+    dt:before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+    dt:before {
+      top: 50%;
+      left: 0.2em;
+      width: 17px;
+      height: 17px;
+      background: $blue1;
+      transform: translateY(-50%);
+    }
+    dt:after {
+      top: 1.1em;
+      left: 0.7em;
+      width: 14px;
+      height: 14px;
+      background: $blue2;
+    }
+    dd {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .check_blue {
+    position: relative;
+    padding: 0.6em 0.3em 0.3em 0.3em;
+    border: 1px solid $blue2;
+    text-align: center;
+  }
+  .check_blue::after {
+    content: "check!";
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    background: #fafcfc;
+    font-size: 25px;
+    color: $blue2;
+    padding: 0 10px;
+  }
+}

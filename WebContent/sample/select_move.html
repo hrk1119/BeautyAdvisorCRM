@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select class="parent" name="日付" required>
+        <option value="" class="msg" disabled selected>-----日付を選択-----</option>
+        <option value="1/11(水)">1/11(水)</option>
+        <option value="2/5(日)">2/5(日)</option>
+        <option value="3/3(金)">3/3(金)</option>
+    </select>
+
+    <select class="children" name="講座名" disabled required>
+        <option value="" class="msg" disabled selected>-----講座名を選択-----</option>
+        <optgroup label="音楽">
+            <option value="餅つき大会" data-val="1/11(水)" data-val="3/3(金)">餅つき大会</option>
+            <option value="音楽理論" data-val="1/11(水)">音楽理論</option>
+            <option value="エレキギター講座" data-val="1/11(水)">エレキギター講座</option>
+            <option value="エレキギター講座" data-val="2/5(日)">エレキギター講座</option>
+            <option value="ドラム講座" data-val="2/5(日)">ドラム講座</option>
+            <option value="エレキベース講座" data-val="3/3(金)">エレキベース講座</option>
+            <option value="ボイストレーニング" data-val="3/3(金)">ボイストレーニング</option>
+        </optgroup>
+        <optgroup label="ウェブ">
+            <option value="HTMLとCSS" data-val="1/11(水)">HTMLとCSS</option>
+            <option value="JavaScript" data-val="1/11(水)">JavaScript</option>
+            <option value="HTMLとCSS" data-val="2/5(日)">HTMLとCSS</option>
+            <option value="PHP" data-val="2/5(日)">PHP</option>
+            <option value="Qiita" data-val="3/3(金)">Qiita</option>
+        </optgroup>
+    </select>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var $children = $('.children');
+            var original = $children.html();
+
+            $('.parent').change(function () {
+                var val1 = $(this).val();
+
+                $children.html(original).find('option').each(function () {
+                    var val2 = $(this).data('val');
+                    if (val1 != val2) {
+                        $(this).not('optgroup,.msg').remove();
+                    }
+                });
+
+                if ($(this).val() === '') {
+                    $children.attr('disabled', 'disabled');
+                } else {
+                    $children.removeAttr('disabled');
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

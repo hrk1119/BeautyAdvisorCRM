@@ -1,0 +1,131 @@
+<html>
+
+<head>
+	<title>simplePaginationのサンプルデモ</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--一時的に対応。コンテンツが増えたら削除予定-->
+	<meta name="robots" content="noindex">
+
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<!--この読み込みが先-->
+	<script type="text/javascript" src="../js/jquery.simplePagination.js"></script>
+
+	<link rel="stylesheet" href="../css/simplePagination.css">
+
+	<style>
+		.a_selection,
+		.b_selection {
+			display: none;
+		}
+
+		#a_page-1,
+		#b_page-1 {
+			display: block;
+		}
+
+		.clearfix {
+			position: relative
+		}
+
+		ul {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%)
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="a_selection" id="a_page-1">
+		<h1>ホームページにページング機能を追加しよう！</h1>
+		<h2>事前準備</h2>
+		<p>準備についての文章1</p>
+		<p>準備についての文章2</p>
+		<p>準備についての文章3</p>
+	</div>
+	<div class="a_selection" id="a_page-2">
+		<h2>HTMLの編集</h2>
+		<p>HTMLについての文章1</p>
+		<p>HTMLについての文章2</p>
+		<p>HTMLについての文章3</p>
+	</div>
+	<div class="a_selection" id="a_page-3">
+		<h2>CSSの編集</h2>
+		<p>CSSについての文章1</p>
+		<p>CSSについての文章2</p>
+		<p>CSSについての文章3</p>
+	</div>
+
+	<div class="pagination-holder clearfix">
+		<div id="light-pagination" class="pagination1"></div>
+	</div>
+
+
+	<div class="b_selection" id="b_page-1">
+		<h1>ホームページにページング機能を追加しよう！</h1>
+		<h2>事前準備</h2>
+		<p>準備についての文章1</p>
+		<p>準備についての文章2</p>
+		<p>準備についての文章3</p>
+	</div>
+	<div class="b_selection" id="b_page-2">
+		<h2>HTMLの編集</h2>
+		<p>HTMLについての文章1</p>
+		<p>HTMLについての文章2</p>
+		<p>HTMLについての文章3</p>
+	</div>
+	<div class="b_selection" id="b_page-3">
+		<h2>CSSの編集</h2>
+		<p>CSSについての文章1</p>
+		<p>CSSについての文章2</p>
+		<p>CSSについての文章3</p>
+	</div>
+
+	<div class="pagination-holder clearfix">
+		<div id="light-pagination" class="pagination2"></div>
+	</div>
+
+
+	<script type="text/javascript">
+		$(function () {
+			$(".pagination1").pagination({
+				items: 3,
+				prevText: "前へ",
+				nextText: "次へ",
+				cssStyle: 'light-theme',
+				onPageClick: function (currentPageNumber) {
+					showPage(currentPageNumber);
+				}
+			})
+			function showPage(currentPageNumber) {
+				var page = "#a_page-" + currentPageNumber;
+				$('.a_selection').hide();
+				$(page).show();
+			}
+		});
+
+		$(function () {
+			$(".pagination2").pagination({
+				items: 3,
+				prevText: "前へ",
+				nextText: "次へ",
+				cssStyle: 'light-theme',
+				onPageClick: function (currentPageNumber) {
+					showPage(currentPageNumber);
+				}
+			})
+			function showPage(currentPageNumber) {
+				var page = "#b_page-" + currentPageNumber;
+				$('.b_selection').hide();
+				$(page).show();
+			}
+		});
+
+	</script>
+</body>
+
+</html>

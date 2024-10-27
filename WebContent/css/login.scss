@@ -1,0 +1,129 @@
+//カラー
+$mainPink: #e58279;
+$subPink: #f7d4c6;
+$mainNavy: #15193a;
+$subNavy: #2b2f5e;
+$mainGray: #464646;
+$subGray: #a7a5a5;
+$yellow: #ffff66;
+$orange: #ffcc00;
+$blue1: #99ccff;
+$blue2: #0066ff;
+
+body {
+  background-image: url(../img/img1.jpg);
+}
+
+.login {
+  .wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box {
+    height: 100%;
+    margin-top: 10em;
+    font-weight: bold;
+    color: $mainPink; /*文字色*/
+    background: #fff;
+    border: solid 3px $mainPink; /*線*/
+    border-radius: 10px; /*角の丸み*/
+  }
+
+  .button {
+    text-align: center;
+    background-color: $mainPink;
+    color: $subPink;
+    border: solid 3px $subPink;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+.start {
+  .customer {
+    margin: auto;
+    margin-top: 7em;
+    .btn {
+      background-color: $mainPink;
+      color: #fff;
+      border: solid 2px #fff;
+      margin-left: 15px;
+      border-radius: 10px; /*角の丸み*/
+
+      &:hover {
+        background-color: #fff;
+        color: $mainPink;
+        border: solid 2px $mainPink;
+      }
+    }
+  }
+  .name {
+    margin: auto;
+    margin-top: 5%;
+
+    color: $mainPink;
+    background-color: #fff;
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .menu {
+    justify-content: center;
+    margin-top: 4em;
+    .btn_main {
+      width: 300px;
+      margin: 10px;
+      color: $mainPink;
+      background-color: #fff;
+      font-size: 35px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      display: block;
+      text-align: center;
+      border: 5px solid;
+      border-radius: 15px; /*角の丸み*/
+      &:hover {
+        text-decoration: none;
+        background-color: $mainPink;
+        color: #fff;
+        border: 5px solid #fff;
+      }
+    }
+  }
+
+  .employee {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+    a {
+      display: block;
+      position: absolute;
+      right: 15px;
+      bottom: 0px;
+      color: $subPink;
+      background-color: $mainNavy;
+      font-size: 20px;
+      width: 200px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: block;
+      text-align: center;
+      border: 5px solid;
+      border-radius: 15px; /*角の丸み*/
+
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        border: 5px solid #fff;
+      }
+    }
+  }
+}

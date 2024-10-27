@@ -1,0 +1,327 @@
+@charset "UTF-8";
+h1 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.box {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 500px;
+}
+
+body {
+  background-image: url(../img/img1.jpg);
+  background-size: cover;
+  color: #464646;
+  background-attachment: fixed;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#sidebar.employee {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: #15193a;
+  color: #f7d4c6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#sidebar.employee p {
+  color: #2b2f5e;
+  background-color: #e58279;
+}
+
+#sidebar.employee .components {
+  padding-bottom: 100vh;
+  line-height: 3;
+}
+
+#sidebar.employee .components a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar.employee .components .active > a,
+#sidebar.employee .components a[aria-expanded="true"] {
+  color: #f7d4c6;
+  background: #2b2f5e;
+}
+
+#sidebar.employee .components li ul li a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #15193a;
+}
+
+#sidebar.employee .components .return {
+  background-color: #e58279;
+  text-align: center;
+}
+
+#sidebar.employee .components .return_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f060";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 20px;
+}
+
+#sidebar.employee .components .employee_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f2c2";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#sidebar.employee .components .product_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f02a";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#sidebar.employee .components .mail_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0e0";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#sidebar.employee .components .customer_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f2bd";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#sidebar.employee .components .menu_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f46c";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#nav-drawer {
+  font-size: 15px;
+  margin: 10px;
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display: none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+  position: fixed;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+  position: absolute;
+  height: 3px;
+  /*線の太さ*/
+  width: 25px;
+  /*長さ*/
+  border-radius: 3px;
+  background: #15193a;
+  display: block;
+  content: "";
+  cursor: pointer;
+}
+
+#nav-open span:before {
+  bottom: -8px;
+}
+
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;
+  /*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  /*最前面に*/
+  width: 90%;
+  /*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 200px;
+  /*最大幅（調整してください）*/
+  height: 100vh;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  /*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+  /*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;
+  /*カバーを表示*/
+  opacity: 0.5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  /*中身を表示（右へスライド）*/
+  -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+#sidebar.customer {
+  height: 100vh;
+  background: #15193a;
+  color: #f7d4c6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0px;
+}
+
+#sidebar.customer p {
+  color: #2b2f5e;
+  background-color: #f7d4c6;
+}
+
+#sidebar.customer .components {
+  line-height: 3;
+}
+
+#sidebar.customer .components a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: #f7d4c6;
+  text-decoration: none;
+}
+
+#sidebar.customer .components .active > a,
+#sidebar.customer .components a[aria-expanded="true"] {
+  color: #f7d4c6;
+  background: #2b2f5e;
+}
+
+#sidebar.customer .components li ul li a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #15193a;
+}
+
+#sidebar.customer .components .employee_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f4fe";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#sidebar.customer .components .reco_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f46c";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#sidebar.customer .components .search_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f22c";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#sidebar.customer .components .diagnosis_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f201";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 23px;
+}
+
+#sidebar.customer .components .return_icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f060";
+  font-weight: 900;
+  padding-right: 5px;
+  color: #f7d4c6;
+  /*アイコンの色*/
+  font-size: 20px;
+}
+/*# sourceMappingURL=sidebar.css.map */
